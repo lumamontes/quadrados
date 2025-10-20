@@ -23,7 +23,7 @@ A minimalist black and white photography gallery built with Astro and Cloudinary
    CLOUDINARY_CLOUD_NAME=your_cloud_name
    CLOUDINARY_API_KEY=your_api_key
    CLOUDINARY_API_SECRET=your_api_secret
-   CLOUDINARY_FOLDER_NAME=your_folder_name
+   CLOUDINARY_FOLDER_NAME=quadrados
    ```
 
 3. **Upload images to Cloudinary**:

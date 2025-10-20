@@ -1,11 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getImagesFromFolder, getOptimizedImageUrl, getResponsiveImageUrls } from '../../lib/cloudinary';
+import { config } from '../../lib/config';
 // import { getPlaiceholder } from 'plaiceholder';
 
 export async function getStaticPaths() {
   try {
-    const folderName = import.meta.env.CLOUDINARY_FOLDER_NAME || 'gallery';
+    const folderName = config.cloudinary.folderName;
     console.log('Fetching images from folder:', folderName);
     
     const images = await getImagesFromFolder(folderName);

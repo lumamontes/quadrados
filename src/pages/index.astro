@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Gallery from '../components/Gallery.astro';
+import { config } from '../lib/config';
 
-// Get the folder name from environment variables
-const folderName = import.meta.env.CLOUDINARY_FOLDER_NAME || 'gallery';
+// Get the folder name from config
+const folderName = config.cloudinary.folderName;
 ---
 
 <Layout 

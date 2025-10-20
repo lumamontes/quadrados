@@ -1,10 +1,11 @@
 import { v2 as cloudinary } from 'cloudinary';
+import { config } from './config';
 
 // Configure Cloudinary
 cloudinary.config({
-  cloud_name: import.meta.env.CLOUDINARY_CLOUD_NAME,
-  api_key: import.meta.env.CLOUDINARY_API_KEY,
-  api_secret: import.meta.env.CLOUDINARY_API_SECRET,
+  cloud_name: config.cloudinary.cloudName,
+  api_key: config.cloudinary.apiKey,
+  api_secret: config.cloudinary.apiSecret,
 });
 
 export interface CloudinaryImage {
