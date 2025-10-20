@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About - Quadrados Gallery">
+	<div class="about">
+		<div class="about-content">
+			<h1>Sobre</h1>
+			
+			<div class="about-text">
+				<p>
+					Esse é um sitezito que armazena todos os quadrados que eu (Luma) faço, são uns quadrados aleatorios que eu faco desde pequena.
+					Eles me vem na cabeça assim e são bem calmantes de fazer, tenho vários perdidos por aí, esses são só alguns que eu registrei foto e quero manter aqui.
+			</div>
+			
+			<div class="about-links">
+				<a href="https://lumamontes.com" target="_blank" rel="noopener noreferrer" class="website-link">
+					Meu site pessoal - lumamontes.com
+				</a>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.about {
+		padding: 2rem;
+		max-width: 800px;
+		margin: 0 auto;
+		min-height: calc(100vh - 80px);
+		display: flex;
+		align-items: center;
+	}
+
+	.about-content {
+		width: 100%;
+	}
+
+	.about h1 {
+		font-size: 2.5rem;
+		font-weight: 300;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.about-text {
+		margin-bottom: 3rem;
+	}
+
+	.about-text p {
+		font-size: 1.1rem;
+		line-height: 1.8;
+		margin-bottom: 1.5rem;
+		text-align: justify;
+	}
+
+	.about-links {
+		text-align: center;
+		padding-top: 2rem;
+		border-top: 1px solid #000000;
+	}
+
+	.website-link {
+		display: inline-block;
+		color: #000000;
+		text-decoration: none;
+		font-size: 1.1rem;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		padding: 1rem 2rem;
+		border: 1px solid #000000;
+		transition: all 0.3s ease;
+		background-color: #ffffff;
+	}
+
+	.website-link:hover {
+		background-color: #000000;
+		color: #ffffff;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	}
+
+	@media (max-width: 768px) {
+		.about {
+			padding: 1rem;
+		}
+		
+		.about h1 {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
+		
+		.about-text p {
+			font-size: 1rem;
+			text-align: left;
+		}
+		
+		.website-link {
+			font-size: 1rem;
+			padding: 0.8rem 1.5rem;
+		}
+	}
+</style>

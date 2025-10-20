@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page Not Found - Quadrados">
+  <div class="not-found">
+    <h1>404</h1>
+    <p>Page not found</p>
+    <a href="/" class="back-link">← Back to Gallery</a>
+  </div>
+</Layout>
+
+<style>
+  .not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 80px);
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .not-found h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+
+  .not-found p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .back-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid #000000;
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+  }
+
+  .back-link:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+</style>
