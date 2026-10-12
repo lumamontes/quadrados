@@ -1,75 +1,84 @@
-# Quadrados Gallery
+# Quadrados
 
-A minimalist black and white photography gallery built with Astro and Cloudinary.
+[![Astro](https://img.shields.io/badge/Astro-5.14.7-BC52EE?logo=astro&logoColor=white)](https://astro.build/)
+[![Cloudinary](https://img.shields.io/badge/Cloudinary-Image_API-3448C5)](https://cloudinary.com/)
+
+![Quadrados gallery preview](assets/home.png)
+
+Quadrados is a small black-and-white photography and drawing gallery. It presents selected square studies in a responsive Astro site, with image discovery and optimization handled through Cloudinary.
 
 ## Features
 
-- **Responsive Gallery**: Images maintain their original aspect ratios
-- **Cloudinary Integration**: Automatic image optimization and delivery
-- **Minimalist Design**: Clean black and white aesthetic with Azeret Mono font
-- **Performance Optimized**: Lazy loading and responsive images
-- **Mobile Friendly**: Fully responsive design
+- Responsive gallery that preserves each image's original aspect ratio.
+- Cloudinary search for images in a configured folder.
+- Optimized responsive URLs with automatic format and quality selection.
+- Minimal monochrome layout using Azeret Mono typography.
+- About page with a link to the author's personal website.
 
-## Setup
+## Tech Stack
 
-1. **Install dependencies**:
-   ```bash
-   pnpm install
-   ```
+- Astro 5.14.7.
+- TypeScript.
+- Cloudinary image API.
+- Sharp and Plaiceholder for image processing.
 
-2. **Configure Cloudinary**:
-   Create a `.env` file in the root directory with your Cloudinary credentials:
-   ```env
-   CLOUDINARY_CLOUD_NAME=your_cloud_name
-   CLOUDINARY_API_KEY=your_api_key
-   CLOUDINARY_API_SECRET=your_api_secret
-   CLOUDINARY_FOLDER_NAME=quadrados
-   ```
+## Getting Started
 
-3. **Upload images to Cloudinary**:
-   - Create a folder in your Cloudinary account
-   - Upload your images to that folder
-   - Update the `CLOUDINARY_FOLDER_NAME` in your `.env` file
+### Prerequisites
 
-4. **Run the development server**:
-   ```bash
-   pnpm dev
-   ```
+- Node.js with pnpm available.
+- A Cloudinary account and a folder containing the gallery images.
+
+### Configure environment variables
+
+Create a local `.env` file. Keep it out of version control:
+
+```env
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+CLOUDINARY_FOLDER_NAME=galeria
+```
+
+### Install and run
+
+```sh
+pnpm install
+pnpm dev
+```
+
+The development server runs at `http://localhost:4321` by default.
+
+### Production build
+
+```sh
+pnpm build
+pnpm preview
+```
+
+## Routes
+
+| Route | Purpose |
+| --- | --- |
+| `/` | Image gallery |
+| `/about` | Project and author information |
+| `/image/[id]` | Individual image page |
 
 ## Project Structure
 
-```
-/
-├── src/
-│   ├── components/
-│   │   └── Gallery.astro          # Gallery component
-│   ├── layouts/
-│   │   └── Layout.astro           # Base layout with navigation
-│   ├── lib/
-│   │   └── cloudinary.ts          # Cloudinary integration
-│   ├── pages/
-│   │   ├── index.astro            # Home page with gallery
-│   │   └── about.astro            # About page
-│   └── styles/
-│       └── global.css             # Global styles
-├── astro.config.mjs               # Astro configuration
-└── package.json
+```text
+src/
+├── components/Gallery.astro  Gallery rendering and image layout
+├── layouts/Layout.astro      Shared page shell and navigation
+├── lib/cloudinary.ts         Cloudinary client and responsive URLs
+├── lib/config.ts             Environment-backed configuration
+├── pages/                    File-based routes
+└── styles/global.css         Global monochrome styling
+public/                       Static favicon and social preview assets
 ```
 
-## Customization
+Change the gallery folder through `CLOUDINARY_FOLDER_NAME`. Adjust the grid and responsive behavior in `src/components/Gallery.astro`; image transformations are centralized in `src/lib/cloudinary.ts`.
 
-- **Font**: The site uses Azeret Mono from Google Fonts
-- **Colors**: Black and white theme can be modified in the CSS files
-- **Gallery Layout**: Adjust grid settings in `Gallery.astro`
-- **Image Sizes**: Modify responsive breakpoints in the Cloudinary service
+## License
 
-## Deployment
-
-The site can be deployed to any static hosting service that supports Astro:
-
-- Vercel
-- Netlify
-- GitHub Pages
-- Cloudflare Pages
-
-Make sure to set your environment variables in your hosting platform's dashboard.
+No license is currently declared in the repository.
