@@ -5,7 +5,7 @@
 
 ![Quadrados gallery preview](assets/home.png)
 
-Quadrados is a small black-and-white photography and drawing gallery. It presents selected square studies in a responsive Astro site, with image discovery and optimization handled through Cloudinary.
+Quadrados is a simple website to keep all the squares figures i make/draw. I’ve been making these random drawings of squares-like figures since I was a kid. They just pop into my head, and they’re really calming to draw and incorporate in other mediums like collages and edits. I have so many scattered around, but these are just a few I’ve photographed and wanted to archive here.
 
 ## Features
 
